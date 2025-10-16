@@ -1,11 +1,15 @@
 package edu.ucaldas.behavior;
 
+//CLASE ABSTRACTA DE TODOS LOS MANEJADORES
 public abstract class Handler {
+
+    //SI NO PUEDE PROCESAR LA SOLICITUD SE LA PASA A ESTE
     protected Handler next;
 
-    public void setNext(Handler nextHandler) {
-        this.next = nextHandler;
+    //METODO PARA DECIDIR CUAL MANEJADOR SIGUE EN LA CADENA
+    public void setNext(Handler next) {
+        this.next = next;
     }
-
-    public abstract String handleRequest(String request);
+    //METODO ABSTRACTO QUE CADA MANEJADOR EN CONCRETO DEBE IMPLEMENTAR
+    public abstract String handleRequest(String requestType);
 }
