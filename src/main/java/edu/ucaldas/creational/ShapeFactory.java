@@ -1,6 +1,6 @@
 package edu.ucaldas.creational;
 
-
+//fabrica de figuras
 public class ShapeFactory {
 
     //METODO QUE DEVUELVE UNA INSTANCIA DE CIRCLE O SQUARE
